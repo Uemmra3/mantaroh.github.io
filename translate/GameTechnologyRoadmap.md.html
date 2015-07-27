@@ -1,19 +1,19 @@
 <p><strong> Mozilla のゲームテクノロジーロードマップ </strong></p>
 <p>[これは米国 Mozilla Future Release ブログで公開された記事 "<a href="https://blog.mozilla.org/futurereleases/2015/07/02/mozilla-games-technology-roadmap/">Mozilla Games Technology Roadmap</a>" を翻訳コミュニティ Uemmra3 氏に翻訳協力して頂いたものです。]</p>
-<p>ゲームとゲーム技術向けプラットフォームとしての Web の更なる進歩やアピールのため、Mozilla は<a href="https://wiki.mozilla.org/Platform/Games">ゲームに特化したロードマップ</a>を発行しました。要するに、これは高パフォーマンスで、プラグインなしの Web 上のゲームに関するものです。最近数年で我々はめざましい進歩をとげました。この流れを続けるため、Mozilla はゲーム開発者やツールメーカーと協働し、コミュニティへより大きな力を与える追加改良を割り出しました。次のロードマップは、我々が受けたフィードバックと、そのフィードバックに応えて現在追求している解決策の両方をざっと示しています。このロードマップは変化しがちであるかもしれません。</p>
+<p>ゲームとゲーム技術向けプラットフォームとしての Web の更なる進歩やアピールのため、Mozilla は<a href="https://wiki.mozilla.org/Platform/Games">ゲームに特化したロードマップ</a>を発行しました。要するに、これは高パフォーマンスで、プラグインなしの Web 上のゲームに関するものです。最近数年で我々はめざましい進歩をとげました。この流れを続けるため、Mozilla はゲーム開発者やツールメーカーと協働し、コミュニティにもっと大きな力を与える追加改良を割り出しました。次のロードマップは、我々が受けたフィードバックと、そのフィードバックに応えて現在追求している解決策との両方をざっと示しています。このロードマップは変化しがちであるかもしれません。</p>
 <p>WebAssembly が明らかになるにつれ、各プラウザは Web パフォーマンスがネィティブレベルになるよう、共通の対策を取ってきています。このロードマップは、ゲーム開発者が最善のエクスペリエンスを提供するために Web プラットフォームに追加された機能について、より広がった視点をざっと示します。ゲームはしばしば、その要求する性質から、技術を進める大きなきっかけになります。Web への利益を最大化するために、解決策ができるだけ広い範囲のアプリケーションに利益となることを保証するよう、注意が払われています。</p>
-<p>この文書には 2 つのレベルがあり、最初はロードマップの節で、現在開発中で来年に取り組める、合理的なレベルで自信を持っているものを含んでいます。2 つ目は検討中の節で、研究活動中のトピックを含んでいます。</p>
+<p>この文書には 2 つのレベルがあり、最初はロードマップの節で、現在開発中で来年に取り組める、合理的なレベルで自信のあるものを含んでいます。2 つ目は検討中の節で、研究活動中のトピックを含んでいます。</p>
 <p><strong> ロードマップ </strong></p>
 <ul>
 <li>開発者に、ハードウェアの並行性をより良く利用できるようにする<ul>
-<li>開発者は Web 上でマルチスレッドのゲームが効率よく動作するようになるように格闘しています:<ul>
+<li>開発者は、Web 上でマルチスレッドのゲームが効率よく動作するようになるように格闘しています:<ul>
 <li>共有配列バッファの標準化、実装、出荷 [<a href="https://blog.mozilla.org/javascript/2015/02/26/the-path-to-parallel-javascript/">1</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1054841">2</a>].</li>
 <li>Emscripten への pthread サポート追加 [<a href="https://groups.google.com/forum/#!msg/emscripten-discuss/gQQRjajQ6iY/DcYQpQyPQmIJ">1</a>,<a href="https://github.com/kripken/emscripten/blob/incoming/site/source/docs/porting/pthreads.rst">2</a>].</li>
 <li>パフォーマンスに敏感な次の Web API を Web ワーカに晒す: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=709490">WebGL</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1121406">WebSockets</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=701634">IndexedDB</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1062849">WebAudio</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=922363">WebRTC</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=WebVR">WebVR</a></li>
 <li>ワーカ間でコンパイル済みコード(asm.js や WebAssembly) を共有する [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1168981">1</a>].</li>
 </ul>
 </li>
-<li>開発者は SIMD ハードウェアがコード最適化してくれるのを望んでいます:<ul>
+<li>開発者は、SIMD ハードウェアがコード最適化してくれるのを望んでいます:<ul>
 <li>SIMD.jsの 標準化、実装、出荷 [<a href="https://hacks.mozilla.org/2014/10/introducing-simd-js/">1</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=894105">2</a>].</li>
 <li>SIMD を WebAssembly 内に含める [<a href="https://github.com/WebAssembly/design/blob/master/PostMVP.md#fixed-width-simd">1</a>].</li>
 <li>Emscripten への SIMD サポート追加 [<a href="https://github.com/kripken/emscripten/labels/SIMD">1</a>].</li>
@@ -23,7 +23,7 @@
 </li>
 </ul>
 <ul>
-<li>大規模なコンパイル済みコードベースのコールドロード時間を改善する<ul>
+<li>大規模なコンパイル済みコードベースのコールドロード時間を改良する<ul>
 <li>開発者は、数百万行のコンパイル済みコードベースのダウンロード、コンパイル、スタートアップ時間が削減されることを望んでいます。<ul>
 <li>WebAssembly は目立ったダウンロードサイズ圧縮を提供するでしょう (polyfill 経由でのネイティブサポートがなされる以前であっても) [<a href="https://github.com/WebAssembly/design/blob/master/FAQ.md#can-the-polyfill-really-be-efficient">1</a>].</li>
 <li>ネイティブにデコードされた WebAssembly は JavaScript/asm.js のパーズよりも、はるかに高速でしょう [<a href="https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#why-a-binary-encoding-instead-of-a-text-only-representation">1</a>].</li>
@@ -31,7 +31,7 @@
 <li>メインスレッド以外で、パーズ/コンパイルをストリーミング化 [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1154987">1</a>].</li>
 </ul>
 </li>
-<li>開発者は HTTP コンテンツエンコードに依存するのを避けたがっています: 汎用的な圧縮には gzip を使う<ul>
+<li>開発者は、汎用的な圧縮向けの HTTP の Content-Encoding:gzip に依存するのを避けたがっています。<ul>
 <li>Emscripten に対して、asm.js / WebAssembly 内で、ダウンロード中の展開(gzip よりもっと積極的なアルゴリズムを許可する)を実行するサポートを追加</li>
 </ul>
 </li>
@@ -42,13 +42,13 @@
 <li>ブラウザストレージの能力を改良する<ul>
 <li>永続ストレージに関する<a href="https://storage.spec.whatwg.org/#dom-storagemanager-requestpersistent">権限のプロンプト</a>(Storage Standard)を避けようとしている開発者は、現在ブラウザに実装されている一時ストレージの制限につき当たります。<ul>
 <li><a href="https://en.wikipedia.org/wiki/Frecency">Frecency</a> のような要因を考慮に入れるため、一時クオータ制限を改良する</li>
-<li>クオータ使用と許可に関するもっと詳細な商法提供 [<a href="https://storage.spec.whatwg.org/#dom-storagemanager-estimate">1</a>].</li>
+<li>クオータ使用と許可に関するもっと詳細な情報を提供 [<a href="https://storage.spec.whatwg.org/#dom-storagemanager-estimate">1</a>].</li>
 <li>強制退去可能な(evictable)ストレージの精度単位を細かくすることの提案、標準化、実装 [<a href="https://storage.spec.whatwg.org/#boxes">1</a>].</li>
 <li>クロスオリジンのストレージ使用の許可 [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1147821">1</a>].</li>
 </ul>
 </li>
 <li>永続ストレージの保証を必要とする開発者は、現在ブラウザに実装されている一時ストレージの制限につき当たります。<ul>
-<li>永続化ストレージの標準化して、他のブラウザが実装できるようにする [<a href="https://storage.spec.whatwg.org/">1</a>].</li>
+<li>永続化ストレージを標準化して、他のブラウザが実装できるようにする [<a href="https://storage.spec.whatwg.org/">1</a>].</li>
 <li>永続化パーミッションのプロンプトに関する、UI 摩擦の削減 [<a href="http://people.mozilla.org/~mverdi/projects/fullscreen/">1</a>].</li>
 <li>ブラウザユーザ向けに、ストレージ管理/強制退去(eviction)の改良</li>
 </ul>
@@ -74,9 +74,9 @@
 <ul>
 <li>プラットフォームをまたいだパフォーマンスへの投資を続ける<ul>
 <li>WebAudio パフォーマンスの、重要な最適化 [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=webaudioperf">1</a>].</li>
-<li>WebGL シェーダーのコンパイル時間の削減 [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918941">1</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=863316">2</a>].</li>
-<li>ブラウザのレンダリングパイプライン内で、遅延やバラツキの削減 [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1071275">1</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1136734">2</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1169000">3</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1057530">4</a>].</li>
-<li>JS, DOM, WebGL, WebRTC, codec, layout, rendering, compositing, animation などへの継続的投資</li>
+<li>WebGL シェーダのコンパイル時間の削減 [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918941">1</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=863316">2</a>].</li>
+<li>ブラウザのレンダリングパイプライン内での、遅延やバラツキの削減 [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1071275">1</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1136734">2</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1169000">3</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1057530">4</a>].</li>
+<li>JS, DOM, WebGL, WebRTC, コーデック, レイアウト, レンダリング, コンポジッティング, アニメーション などへの継続的投資</li>
 </ul>
 </li>
 </ul>
